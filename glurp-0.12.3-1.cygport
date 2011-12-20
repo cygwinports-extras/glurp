@@ -1,0 +1,11 @@
+DESCRIPTION="GTK+2 MPD client"
+HOMEPAGE="http://sourceforge.net/projects/glurp/"
+SRC_URI="mirror://sourceforge/glurp/${P}.tar.gz"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	newicon ${S}/pixmaps/media-audiofile.png glurp.png
+	make_desktop_entry glurp "Glurp" glurp "AudioVideo;Audio;Player"
+}

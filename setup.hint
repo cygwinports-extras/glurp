@@ -1,0 +1,5 @@
+category: Audio
+requires: libgdk_pixbuf2.0_0 libglib2.0_0 libgtk2.0_0 libmpd1 libpango1.0_0
+sdesc: "GTK+2 MPD client"
+ldesc: "Glurp is a GTK+-2.x based graphical client for the Music Player 
+Daemon."
