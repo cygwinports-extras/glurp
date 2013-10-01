@@ -1,0 +1,17 @@
+NAME="glurp"
+VERSION=0.12.3
+RELEASE=1
+CATEGORY="Audio"
+SUMMARY="GTK+2 MPD client"
+DESCRIPTION="Glurp is a GTK+-2.x based graphical client for the Music Player
+Daemon."
+HOMEPAGE="http://sourceforge.net/projects/glurp/"
+SRC_URI="mirror://sourceforge/glurp/glurp-${VERSION}.tar.gz"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	newicon ${S}/pixmaps/media-audiofile.png glurp.png
+	make_desktop_entry glurp "Glurp" glurp "AudioVideo;Audio;Player"
+}
